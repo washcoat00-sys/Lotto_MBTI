@@ -1,3 +1,24 @@
+:root {
+    --bg-color: #f0f0f0;
+    --container-bg: white;
+    --text-color: #333;
+    --btn-bg: #4CAF50;
+    --btn-hover: #45a049;
+    --toggle-btn-bg: #e0e0e0;
+    --toggle-btn-text: #333;
+    --toggle-btn-hover: #ccc;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --container-bg: #1e1e1e;
+    --text-color: #ffffff;
+    --btn-bg: #388e3c;
+    --btn-hover: #2e7d32;
+    --toggle-btn-bg: #333;
+    --toggle-btn-text: #fff;
+    --toggle-btn-hover: #444;
+}
 
 body {
     font-family: sans-serif;
@@ -5,21 +26,46 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f0f0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-switch-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#theme-toggle {
+    background-color: var(--toggle-btn-bg);
+    color: var(--toggle-btn-text);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: var(--toggle-btn-hover);
 }
 
 .container {
     text-align: center;
-    background-color: white;
+    background-color: var(--container-bg);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
 }
 
 h1 {
     margin-bottom: 2rem;
-    color: #333;
+    color: var(--text-color);
+    transition: color 0.3s;
 }
 
 .numbers-container {
@@ -45,7 +91,7 @@ h1 {
     padding: 0.8rem 2rem;
     font-size: 1rem;
     color: white;
-    background-color: #4CAF50;
+    background-color: var(--btn-bg);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -53,5 +99,5 @@ h1 {
 }
 
 #generate-btn:hover {
-    background-color: #45a049;
+    background-color: var(--btn-hover);
 }

@@ -23,9 +23,11 @@ body.dark-mode {
 body {
     font-family: sans-serif;
     display: flex;
+    flex-direction: column; /* Stack containers vertically */
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 2rem 0; /* Add padding for vertical spacing */
     background-color: var(--bg-color);
     color: var(--text-color);
     margin: 0;
@@ -99,5 +101,67 @@ h1 {
 }
 
 #generate-btn:hover {
+    background-color: var(--btn-hover);
+}
+
+.contact-form-container {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: var(--container-bg);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s;
+}
+
+.contact-form-container h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--btn-bg);
+}
+
+#submit-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--btn-bg);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submit-btn:hover {
     background-color: var(--btn-hover);
 }

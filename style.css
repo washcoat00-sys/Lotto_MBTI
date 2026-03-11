@@ -1,73 +1,39 @@
+
 :root {
     --bg-color: #f0f0f0;
     --container-bg: white;
     --text-color: #333;
     --btn-bg: #4CAF50;
     --btn-hover: #45a049;
-    --toggle-btn-bg: #e0e0e0;
-    --toggle-btn-text: #333;
-    --toggle-btn-hover: #ccc;
-}
-
-body.dark-mode {
-    --bg-color: #121212;
-    --container-bg: #1e1e1e;
-    --text-color: #ffffff;
-    --btn-bg: #388e3c;
-    --btn-hover: #2e7d32;
-    --toggle-btn-bg: #333;
-    --toggle-btn-text: #fff;
-    --toggle-btn-hover: #444;
 }
 
 body {
     font-family: sans-serif;
     display: flex;
-    flex-direction: column; /* Stack containers vertically */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 2rem 0; /* Add padding for vertical spacing */
     background-color: var(--bg-color);
     color: var(--text-color);
     margin: 0;
-    transition: background-color 0.3s, color 0.3s;
+    padding: 2rem 0;
 }
 
-.theme-switch-wrapper {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-#theme-toggle {
-    background-color: var(--toggle-btn-bg);
-    color: var(--toggle-btn-text);
-    border: none;
-    padding: 8px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-#theme-toggle:hover {
-    background-color: var(--toggle-btn-hover);
-}
-
-.container {
+.container, .mbti-container {
     text-align: center;
     background-color: var(--container-bg);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    width: 90%;
 }
 
-h1 {
+h1, h2 {
     margin-bottom: 2rem;
     color: var(--text-color);
-    transition: color 0.3s;
 }
 
 .numbers-container {
@@ -89,7 +55,7 @@ h1 {
     color: white;
 }
 
-#generate-btn {
+#generate-btn, #mbti-submit-btn {
     padding: 0.8rem 2rem;
     font-size: 1rem;
     color: white;
@@ -100,68 +66,28 @@ h1 {
     transition: background-color 0.3s;
 }
 
-#generate-btn:hover {
+#generate-btn:hover, #mbti-submit-btn:hover {
     background-color: var(--btn-hover);
 }
 
-.contact-form-container {
-    margin-top: 2rem;
-    padding: 2rem;
-    background-color: var(--container-bg);
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
+.mbti-container .question {
     text-align: left;
-    transition: background-color 0.3s;
-}
-
-.contact-form-container h2 {
     margin-bottom: 1.5rem;
-    text-align: center;
 }
 
-.form-group {
-    margin-bottom: 1rem;
+.mbti-container .question p {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
-.form-group label {
+.mbti-container label {
     display: block;
     margin-bottom: 0.5rem;
-    font-weight: bold;
-}
-
-.form-group input, 
-.form-group textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-size: 1rem;
-    box-sizing: border-box; /* Ensures padding doesn't affect width */
-    transition: border-color 0.3s;
-}
-
-.form-group input:focus, 
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--btn-bg);
-}
-
-#submit-btn {
-    width: 100%;
-    padding: 0.8rem;
-    background-color: var(--btn-bg);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-#submit-btn:hover {
-    background-color: var(--btn-hover);
+#mbti-result {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
 }

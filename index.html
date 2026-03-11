@@ -1,38 +1,45 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
+    <title>Lotto & MBTI</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="theme-switch-wrapper">
-        <button id="theme-toggle">🌙 Dark Mode</button>
-    </div>
     <div class="container">
         <h1>Lotto Number Generator</h1>
         <div class="numbers-container"></div>
         <button id="generate-btn">Generate Numbers</button>
     </div>
 
-    <div class="contact-form-container">
-        <h2>제휴 및 문의</h2>
-        <form action="https://formspree.io/f/xreyqbjj" method="POST">
-            <div class="form-group">
-                <label for="email">이메일</label>
-                <input type="email" id="email" name="email" placeholder="email@example.com" required>
+    <div class="mbti-container">
+        <h2>MBTI Personality Assessment</h2>
+        <div id="mbti-questions">
+            <div class="question">
+                <p>1. At a party, do you:</p>
+                <label><input type="radio" name="q1" value="E"> Interact with many, including strangers</label><br>
+                <label><input type="radio" name="q1" value="I"> Interact with a few, known to you</label><br>
             </div>
-            <div class="form-group">
-                <label for="subject">문의 제목</label>
-                <input type="text" id="subject" name="subject" value="[제휴 문의]" required>
+            <div class="question">
+                <p>2. Are you more of a:</p>
+                <label><input type="radio" name="q2" value="S"> Realistic person</label><br>
+                <label><input type="radio" name="q2" value="N"> Imaginative person</label><br>
             </div>
-            <div class="form-group">
-                <label for="message">문의 내용</label>
-                <textarea id="message" name="message" rows="4" placeholder="문의 내용을 입력해주세요." required></textarea>
+            <div class="question">
+                <p>3. When making a decision, are you more likely to:</p>
+                <label><input type="radio" name="q3" value="T"> Decide with your head</label><br>
+                <label><input type="radio" name="q3" value="F"> Decide with your heart</label><br>
             </div>
-            <button type="submit" id="submit-btn">보내기</button>
-        </form>
+            <div class="question">
+                <p>4. Do you prefer to:</p>
+                <label><input type="radio" name="q4" value="J"> Have things settled and decided</label><br>
+                <label><input type="radio" name="q4" value="P"> Be open to new information and options</label><br>
+            </div>
+        </div>
+        <button id="mbti-submit-btn">Show My MBTI</button>
+        <div id="mbti-result"></div>
     </div>
 
     <script src="main.js"></script>

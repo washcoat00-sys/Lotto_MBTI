@@ -1,86 +1,201 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto & MBTI</title>
+    <title>운세와 성격 - 로또 번호 생성기 & MBTI 테스트</title>
+    <meta name="description" content="무료 로또 번호 생성기와 정확한 MBTI 성격 유형 검사를 제공합니다. 당신의 행운과 성격을 확인해보세요.">
+    <meta name="keywords" content="로또, 로또번호생성기, MBTI, MBTI테스트, 성격유형검사, 무료운세">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Lotto Number Generator</h1>
-        <div class="numbers-container"></div>
-        <button id="generate-btn">Generate Numbers</button>
-    </div>
+    <header>
+        <nav class="nav-container">
+            <div class="logo">운세와 성격</div>
+            <ul class="nav-links">
+                <li><a href="#home">홈</a></li>
+                <li><a href="#lotto">로또 생성</a></li>
+                <li><a href="#mbti">MBTI 테스트</a></li>
+                <li><a href="#tips">꿀팁 정보</a></li>
+                <li><a href="#about">소개</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="mbti-container">
-        <h2>MBTI 성격 유형 검사</h2>
-        <div id="mbti-questions">
-            <div class="question">
-                <p>1. 새로운 사람을 만나는 것을 즐기시나요?</p>
-                <label><input type="radio" name="q1" value="E"> 네, 새로운 사람들과 대화하는 것이 즐겁습니다.</label><br>
-                <label><input type="radio" name="q1" value="I"> 아니요, 친한 사람들과 깊은 대화를 나누는 것이 좋습니다.</label><br>
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="content-section">
+            <div class="hero">
+                <h1>당신의 행운과 성격을 알아보세요</h1>
+                <p>과학적인 MBTI 테스트와 재미로 보는 로또 번호 생성기를 한 곳에서 만나보세요. 고품질의 콘텐츠와 서비스를 제공하기 위해 노력하고 있습니다.</p>
+                <div class="hero-btns">
+                    <a href="#lotto" class="btn primary">로또 번호 뽑기</a>
+                    <a href="#mbti" class="btn secondary">MBTI 검사하기</a>
+                </div>
             </div>
-            <div class="question">
-                <p>2. 주말에 주로 어떻게 시간을 보내시나요?</p>
-                <label><input type="radio" name="q2" value="E"> 친구들과 만나서 활동적으로 보냅니다.</label><br>
-                <label><input type="radio" name="q2" value="I"> 집에서 조용히 휴식을 취하며 보냅니다.</label><br>
+            
+            <div class="info-cards">
+                <div class="card">
+                    <h3>신뢰할 수 있는 MBTI</h3>
+                    <p>정확한 질문 구성을 통해 당신의 성격 유형을 분석해 드립니다. 나도 몰랐던 나의 모습을 발견해보세요.</p>
+                </div>
+                <div class="card">
+                    <h3>공정한 로또 생성</h3>
+                    <p>완전한 난수 발생 알고리즘을 사용하여 공정하게 로또 번호를 생성합니다. 오늘의 행운을 시험해보세요.</p>
+                </div>
+                <div class="card">
+                    <h3>매일 업데이트되는 팁</h3>
+                    <p>행운을 부르는 습관, 성격 유형별 소통 방법 등 유익한 정보를 매일 제공합니다.</p>
+                </div>
             </div>
-            <div class="question">
-                <p>3. 스트레스를 받을 때 어떻게 푸시나요?</p>
-                <label><input type="radio" name="q3" value="E"> 사람들을 만나서 수다를 떨며 풉니다.</label><br>
-                <label><input type="radio" name="q3" value="I"> 혼자만의 시간을 가지며 생각을 정리합니다.</label><br>
+        </section>
+
+        <!-- Lotto Section -->
+        <section id="lotto" class="content-section" style="display:none;">
+            <div class="container">
+                <h2>로또 번호 생성기</h2>
+                <p class="section-desc">무작위 알고리즘을 사용하여 1부터 45까지의 행운의 숫자 6개를 추천해 드립니다.</p>
+                <div class="numbers-container"></div>
+                <button id="generate-btn">새 번호 생성하기</button>
+                <div class="lotto-info">
+                    <h3>로또 당첨 확률을 높이는 상식</h3>
+                    <ul>
+                        <li>균형 잡힌 조합: 홀수와 짝수의 비율을 3:3 또는 2:4 정도로 섞는 것이 통계적으로 유리합니다.</li>
+                        <li>번호 합계: 선택한 6개 번호의 합이 100~170 사이가 되는 경우가 가장 많습니다.</li>
+                        <li>연속 번호 지양: 1, 2, 3과 같은 연속된 번호가 3개 이상 나오는 경우는 드뭅니다.</li>
+                    </ul>
+                </div>
             </div>
-            <div class="question">
-                <p>4. 어떤 종류의 책이나 영화를 선호하시나요?</p>
-                <label><input type="radio" name="q4" value="S"> 현실적이고 실용적인 내용이 좋습니다.</label><br>
-                <label><input type="radio" name="q4" value="N"> 상상력을 자극하고 판타지적인 내용이 좋습니다.</label><br>
+        </section>
+
+        <!-- MBTI Section -->
+        <section id="mbti" class="content-section" style="display:none;">
+            <div class="mbti-container">
+                <h2>MBTI 성격 유형 검사</h2>
+                <p class="section-desc">12개의 질문을 통해 당신의 성향을 파악합니다. 솔직하게 답변할수록 정확도가 높아집니다.</p>
+                <div id="mbti-questions">
+                    <!-- Questions will be injected or kept here -->
+                    <div class="question">
+                        <p>1. 새로운 사람을 만나는 것을 즐기시나요?</p>
+                        <label><input type="radio" name="q1" value="E"> 네, 새로운 사람들과 대화하는 것이 즐겁습니다.</label>
+                        <label><input type="radio" name="q1" value="I"> 아니요, 친한 사람들과 깊은 대화를 나누는 것이 좋습니다.</label>
+                    </div>
+                    <div class="question">
+                        <p>2. 주말에 주로 어떻게 시간을 보내시나요?</p>
+                        <label><input type="radio" name="q2" value="E"> 친구들과 만나서 활동적으로 보냅니다.</label>
+                        <label><input type="radio" name="q2" value="I"> 집에서 조용히 휴식을 취하며 보냅니다.</label>
+                    </div>
+                    <div class="question">
+                        <p>3. 스트레스를 받을 때 어떻게 푸시나요?</p>
+                        <label><input type="radio" name="q3" value="E"> 사람들을 만나서 수다를 떨며 풉니다.</label>
+                        <label><input type="radio" name="q3" value="I"> 혼자만의 시간을 가지며 생각을 정리합니다.</label>
+                    </div>
+                    <div class="question">
+                        <p>4. 어떤 종류의 책이나 영화를 선호하시나요?</p>
+                        <label><input type="radio" name="q4" value="S"> 현실적이고 실용적인 내용이 좋습니다.</label>
+                        <label><input type="radio" name="q4" value="N"> 상상력을 자극하고 판타지적인 내용이 좋습니다.</label>
+                    </div>
+                    <div class="question">
+                        <p>5. 일을 처리할 때 어떤 방식을 선호하시나요?</p>
+                        <label><input type="radio" name="q5" value="S"> 기존의 검증된 방식을 따르는 편입니다.</label>
+                        <label><input type="radio" name="q5" value="N"> 새로운 아이디어를 시도하고 혁신적인 방식을 찾습니다.</label>
+                    </div>
+                    <div class="question">
+                        <p>6. 미래에 대해 어떻게 생각하시나요?</p>
+                        <label><input type="radio" name="q6" value="S"> 현재에 집중하며 구체적인 계획을 세웁니다.</label>
+                        <label><input type="radio" name="q6" value="N"> 미래의 가능성에 대해 상상하는 것을 즐깁니다.</label>
+                    </div>
+                    <div class="question">
+                        <p>7. 친구가 고민을 털어놓을 때 어떻게 반응하시나요?</p>
+                        <label><input type="radio" name="q7" value="T"> 문제 해결을 위한 조언을 해줍니다.</label>
+                        <label><input type="radio" name="q7" value="F"> 먼저 공감해주고 위로해줍니다.</label>
+                    </div>
+                    <div class="question">
+                        <p>8. 결정을 내릴 때 가장 중요하게 생각하는 것은?</p>
+                        <label><input type="radio" name="q8" value="T"> 논리와 객관적인 사실입니다.</label>
+                        <label><input type="radio" name="q8" value="F"> 사람들의 감정과 조화입니다.</label>
+                    </div>
+                    <div class="question">
+                        <p>9. 비판을 받을 때 어떻게 반응하시나요?</p>
+                        <label><input type="radio" name="q9" value="T"> 비판의 타당성을 분석하고 수용합니다.</label>
+                        <label><input type="radio" name="q9" value="F"> 개인적으로 받아들이고 상처를 받을 수 있습니다.</label>
+                    </div>
+                    <div class="question">
+                        <p>10. 여행을 갈 때 어떻게 준비하시나요?</p>
+                        <label><input type="radio" name="q10" value="J"> 상세한 일정을 세우고 계획대로 움직입니다.</label>
+                        <label><input type="radio" name="q10" value="P"> 대략적인 목적지만 정하고 상황에 맞게 유연하게 움직입니다.</label>
+                    </div>
+                    <div class="question">
+                        <p>11. 업무나 과제를 할 때 어떤 스타일인가요?</p>
+                        <label><input type="radio" name="q11" value="J"> 기한을 정해두고 체계적으로 끝냅니다.</label>
+                        <label><input type="radio" name="q11" value="P"> 마감일 직전에 몰아서 하는 편입니다.</label>
+                    </div>
+                    <div class="question">
+                        <p>12. 일상 생활에서 정리정돈을 잘 하시나요?</p>
+                        <label><input type="radio" name="q12" value="J"> 항상 주변을 깔끔하게 정리하는 편입니다.</label>
+                        <label><input type="radio" name="q12" value="P"> 다소 어수선해도 크게 신경 쓰지 않습니다.</label>
+                    </div>
+                </div>
+                <button id="mbti-submit-btn">결과 확인하기</button>
+                <div id="mbti-result"></div>
             </div>
-            <div class="question">
-                <p>5. 일을 처리할 때 어떤 방식을 선호하시나요?</p>
-                <label><input type="radio" name="q5" value="S"> 기존의 검증된 방식을 따르는 편입니다.</label><br>
-                <label><input type="radio" name="q5" value="N"> 새로운 아이디어를 시도하고 혁신적인 방식을 찾습니다.</label><br>
+        </section>
+
+        <!-- Tips Section -->
+        <section id="tips" class="content-section" style="display:none;">
+            <div class="container blog-container">
+                <h2>유용한 정보 게시판</h2>
+                <article class="post">
+                    <h3>MBTI 유형별 스트레스 해소법</h3>
+                    <p>내향형(I)은 혼자만의 시간을 통해 에너지를 충전하는 것이 중요하며, 외향형(E)은 친구들과의 대화를 통해 활력을 얻습니다. 자신의 유형에 맞는 휴식 방법을 찾아보세요.</p>
+                </article>
+                <article class="post">
+                    <h3>로또 번호 선택 시 피해야 할 습관</h3>
+                    <p>너무 유명한 번호(예: 지난주 당첨 번호)를 그대로 쓰는 것은 피하는 것이 좋습니다. 당첨자가 많아지면 수령액이 줄어들기 때문입니다. 자신만의 규칙을 만들어보세요.</p>
+                </article>
+                <article class="post">
+                    <h3>행운을 불러오는 긍정적인 마음가짐</h3>
+                    <p>심리학적으로 긍정적인 태도를 가진 사람들이 기회를 더 잘 포착한다고 합니다. 행운은 준비된 사람에게 찾아온다는 사실을 잊지 마세요.</p>
+                </article>
             </div>
-            <div class="question">
-                <p>6. 미래에 대해 어떻게 생각하시나요?</p>
-                <label><input type="radio" name="q6" value="S"> 현재에 집중하며 구체적인 계획을 세웁니다.</label><br>
-                <label><input type="radio" name="q6" value="N"> 미래의 가능성에 대해 상상하는 것을 즐깁니다.</label><br>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="content-section" style="display:none;">
+            <div class="container">
+                <h2>서비스 소개</h2>
+                <p>본 사이트는 사용자들에게 즐거움과 자아 성찰의 기회를 제공하기 위해 제작되었습니다. 우리는 데이터의 정확성과 사용자의 개인정보 보호를 최우선으로 생각합니다.</p>
+                <h3>문의하기</h3>
+                <p>서비스 이용 중 불편한 점이나 제안 사항이 있다면 아래 이메일로 연락주세요.</p>
+                <p>Email: support@example.com</p>
             </div>
-            <div class="question">
-                <p>7. 친구가 고민을 털어놓을 때 어떻게 반응하시나요?</p>
-                <label><input type="radio" name="q7" value="T"> 문제 해결을 위한 조언을 해줍니다.</label><br>
-                <label><input type="radio" name="q7" value="F"> 먼저 공감해주고 위로해줍니다.</label><br>
+        </section>
+
+        <!-- Privacy Section (Hidden by default, linked from footer) -->
+        <section id="privacy" class="content-section" style="display:none;">
+            <div class="container">
+                <h2>개인정보 처리방침</h2>
+                <p>본 사이트는 사용자의 개인정보를 수집하지 않습니다. MBTI 테스트 결과는 브라우저 내에서만 처리되며 서버에 저장되지 않습니다.</p>
+                <p>쿠키 사용 안내: 서비스 최적화 및 광고 제공을 위해 쿠키를 사용할 수 있습니다.</p>
+                <p>광고 안내: 본 서비스는 Google AdSense 광고를 포함할 수 있으며, Google은 사용자의 방문 기록을 바탕으로 맞춤형 광고를 제공할 수 있습니다.</p>
             </div>
-            <div class="question">
-                <p>8. 결정을 내릴 때 가장 중요하게 생각하는 것은?</p>
-                <label><input type="radio" name="q8" value="T"> 논리와 객관적인 사실입니다.</label><br>
-                <label><input type="radio" name="q8" value="F"> 사람들의 감정과 조화입니다.</label><br>
-            </div>
-            <div class="question">
-                <p>9. 비판을 받을 때 어떻게 반응하시나요?</p>
-                <label><input type="radio" name="q9" value="T"> 비판의 타당성을 분석하고 수용합니다.</label><br>
-                <label><input type="radio" name="q9" value="F"> 개인적으로 받아들이고 상처를 받을 수 있습니다.</label><br>
-            </div>
-            <div class="question">
-                <p>10. 여행을 갈 때 어떻게 준비하시나요?</p>
-                <label><input type="radio" name="q10" value="J"> 상세한 일정을 세우고 계획대로 움직입니다.</label><br>
-                <label><input type="radio" name="q10" value="P"> 대략적인 목적지만 정하고 상황에 맞게 유연하게 움직입니다.</label><br>
-            </div>
-            <div class="question">
-                <p>11. 업무나 과제를 할 때 어떤 스타일인가요?</p>
-                <label><input type="radio" name="q11" value="J"> 기한을 정해두고 체계적으로 끝냅니다.</label><br>
-                <label><input type="radio" name="q11" value="P"> 마감일 직전에 몰아서 하는 편입니다.</label><br>
-            </div>
-            <div class="question">
-                <p>12. 일상 생활에서 정리정돈을 잘 하시나요?</p>
-                <label><input type="radio" name="q12" value="J"> 항상 주변을 깔끔하게 정리하는 편입니다.</label><br>
-                <label><input type="radio" name="q12" value="P"> 다소 어수선해도 크게 신경 쓰지 않습니다.</label><br>
-            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 운세와 성격. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#privacy">개인정보 처리방침</a></li>
+                <li><a href="#about">이용약관</a></li>
+                <li><a href="#about">문의하기</a></li>
+            </ul>
         </div>
-        <button id="mbti-submit-btn">내 MBTI 결과 보기</button>
-        <div id="mbti-result"></div>
-    </div>
+    </footer>
 
     <script src="main.js"></script>
 </body>

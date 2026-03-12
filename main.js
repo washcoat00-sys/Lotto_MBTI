@@ -36,20 +36,38 @@ const generateBtn = document.getElementById('generate-btn');
 function generateNumbers() {
     if (!numbersContainer) return;
     numbersContainer.innerHTML = '';
-    const numbers = new Set();
-    while (numbers.size < 6) {
-        const randomNumber = Math.floor(Math.random() * 45) + 1;
-        numbers.add(randomNumber);
-    }
+    
+    // Generate 5 sets of numbers
+    for (let i = 0; i < 5; i++) {
+        const setWrapper = document.createElement('div');
+        setWrapper.classList.add('number-set');
+        
+        const setLabel = document.createElement('div');
+        setLabel.classList.add('set-label');
+        setLabel.textContent = `${String.fromCharCode(65 + i)} 세트`;
+        setWrapper.appendChild(setLabel);
 
-    const sortedNumbers = Array.from(numbers).sort((a, b) => a - b);
+        const ballsContainer = document.createElement('div');
+        ballsContainer.classList.add('balls-container');
 
-    for (const number of sortedNumbers) {
-        const numberEl = document.createElement('div');
-        numberEl.classList.add('number');
-        numberEl.textContent = number;
-        numberEl.style.backgroundColor = getNumberColor(number);
-        numbersContainer.appendChild(numberEl);
+        const numbers = new Set();
+        while (numbers.size < 6) {
+            const randomNumber = Math.floor(Math.random() * 45) + 1;
+            numbers.add(randomNumber);
+        }
+
+        const sortedNumbers = Array.from(numbers).sort((a, b) => a - b);
+
+        for (const number of sortedNumbers) {
+            const numberEl = document.createElement('div');
+            numberEl.classList.add('number');
+            numberEl.textContent = number;
+            numberEl.style.backgroundColor = getNumberColor(number);
+            ballsContainer.appendChild(numberEl);
+        }
+        
+        setWrapper.appendChild(ballsContainer);
+        numbersContainer.appendChild(setWrapper);
     }
 }
 

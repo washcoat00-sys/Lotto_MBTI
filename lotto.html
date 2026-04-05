@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>통계 기반 로또 번호 생성기 - 운세와 성격</title>
+    <meta name="description" content="과거 당첨 데이터를 분석한 통계적 알고리즘으로 이번 주 로또 행운 번호를 생성하세요. 홀짝 비율, 합계 범위 등 과학적 접근을 제공합니다.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7086281720678002" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">운세와 성격</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">홈</a></li>
+                <li><a href="fortune.html">오늘의 운세</a></li>
+                <li><a href="lotto.html" class="active">로또 생성</a></li>
+                <li><a href="mbti.html">MBTI 테스트</a></li>
+                <li><a href="tips.html">꿀팁 정보</a></li>
+                <li><a href="about.html">소개</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lotto" class="content-section">
+            <div class="container">
+                <h1>로또 번호 생성기 (통계 기반 시스템)</h1>
+                <p class="section-desc">무작위 추출 알고리즘과 통계적 필터링을 결합하여 최적의 조합을 추천합니다. 아래 버튼을 눌러 오늘의 행운 번호 5세트를 확인해보세요.</p>
+                
+                <div class="lotto-action-area">
+                    <div class="numbers-container"></div>
+                    <button id="generate-btn" class="btn primary large">새로운 행운 번호 생성하기</button>
+                </div>
+
+                <div class="lotto-info">
+                    <h3>로또 당첨 확률을 높이는 전문 상식</h3>
+                    <p>로또는 확률 게임이지만, 과거의 데이터를 분석하면 흥미로운 패턴을 발견할 수 있습니다. 다음은 전문가들이 제안하는 번호 선택의 팁입니다.</p>
+                    <div class="tip-grid">
+                        <div class="tip-item">
+                            <h4>1. 홀수와 짝수의 조화</h4>
+                            <p>과거 당첨 번호를 보면 홀수와 짝수가 3:3 또는 2:4로 섞인 경우가 전체의 80% 이상을 차지합니다. 한쪽으로 치우치지 않는 조합이 중요합니다.</p>
+                        </div>
+                        <div class="tip-item">
+                            <h4>2. 연속 번호의 희소성</h4>
+                            <p>세 개 이상의 숫자가 연속으로 나오는(예: 11, 12, 13) 경우는 매우 드뭅니다. 가능하면 번호를 넓게 분산시켜 선택하는 것이 유리합니다.</p>
+                        </div>
+                        <div class="tip-item">
+                            <h4>3. 고저 비율 확인</h4>
+                            <p>1~45의 중간값인 23을 기준으로 낮은 숫자(1-22)와 높은 숫자(23-45)가 적절히 섞여야 합니다. 통계적으로 3:3 비율이 가장 빈번합니다.</p>
+                        </div>
+                        <div class="tip-item">
+                            <h4>4. 합계의 법칙</h4>
+                            <p>선택한 6개 번호의 총합이 100에서 170 사이에 위치할 때 가장 안정적인 결과가 나옵니다. 너무 낮거나 높은 합계는 피하는 것이 좋습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 운세와 성격. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="privacy.html">개인정보 처리방침</a></li>
+                <li><a href="about.html">이용약관</a></li>
+                <li><a href="about.html">문의하기</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

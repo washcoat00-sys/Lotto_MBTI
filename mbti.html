@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정밀 MBTI 성격 유형 검사 - 운세와 성격</title>
+    <meta name="description" content="심리학 기반의 12개 핵심 문항을 통해 당신의 MBTI 성격 유형을 무료로 분석하세요. 상세한 성격 설명과 맞춤형 조언을 제공합니다.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7086281720678002" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">운세와 성격</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">홈</a></li>
+                <li><a href="fortune.html">오늘의 운세</a></li>
+                <li><a href="lotto.html">로또 생성</a></li>
+                <li><a href="mbti.html" class="active">MBTI 테스트</a></li>
+                <li><a href="tips.html">꿀팁 정보</a></li>
+                <li><a href="about.html">소개</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="mbti" class="content-section">
+            <div class="container">
+                <div class="mbti-container card">
+                    <h1>MBTI 성격 유형 검사 (심리 분석 도구)</h1>
+                    <p class="section-desc">자신의 내면을 들여다보는 12개의 질문에 답해보세요. 검사 결과는 당신의 인간관계와 커리어 설계에 중요한 지표가 될 수 있습니다.</p>
+                    
+                    <!-- Progress Bar -->
+                    <div class="mbti-progress-container">
+                        <div class="mbti-progress-bar" id="mbti-progress"></div>
+                        <span id="mbti-progress-text">진행도: 0%</span>
+                    </div>
+
+                    <div id="mbti-questions-container">
+                        <div id="mbti-questions">
+                            <!-- Questions are dynamically loaded from main.js or kept here for SEO -->
+                            <div class="question active" data-q="1">
+                                <p>1. 새로운 환경에서 처음 만나는 사람들과 대화할 때 당신의 태도는?</p>
+                                <label><input type="radio" name="q1" value="E"> 적극적으로 먼저 다가가 대화를 주도하고 에너지를 얻는다.</label>
+                                <label><input type="radio" name="q1" value="I"> 상대방이 먼저 다가오기를 기다리며 관찰하는 편이다.</label>
+                            </div>
+                            <div class="question" data-q="2">
+                                <p>2. 주말이나 휴일에 에너지를 충전하는 가장 선호하는 방식은?</p>
+                                <label><input type="radio" name="q2" value="E"> 밖으로 나가 친구들을 만나거나 활발한 야외 활동을 즐긴다.</label>
+                                <label><input type="radio" name="q2" value="I"> 집에서 조용히 독서, 영화 감상 등 혼자만의 시간을 가진다.</label>
+                            </div>
+                            <div class="question" data-q="3">
+                                <p>3. 스트레스가 많은 한 주를 보낸 후 당신이 선택하는 방법은?</p>
+                                <label><input type="radio" name="q3" value="E"> 시끌벅적한 모임에 참석하여 수다를 떨며 스트레스를 해소한다.</label>
+                                <label><input type="radio" name="q3" value="I"> 차분한 음악을 듣거나 일기를 쓰며 생각을 정리한다.</label>
+                            </div>
+                            <div class="question" data-q="4">
+                                <p>4. 정보를 습득할 때 당신이 더 신뢰하는 것은?</p>
+                                <label><input type="radio" name="q4" value="S"> 오감을 통해 직접 경험하고 확인한 구체적인 사실과 데이터.</label>
+                                <label><input type="radio" name="q4" value="N"> 육감이나 직관, 그리고 보이지 않는 가능성과 아이디어.</label>
+                            </div>
+                            <div class="question" data-q="5">
+                                <p>5. 업무를 수행할 때 당신의 스타일은?</p>
+                                <label><input type="radio" name="q5" value="S"> 이미 검증된 매뉴얼과 효율적인 기존 방식을 성실히 따른다.</label>
+                                <label><input type="radio" name="q5" value="N"> 창의적인 대안을 제시하고 새로운 시스템을 만드는 것을 즐긴다.</label>
+                            </div>
+                            <div class="question" data-q="6">
+                                <p>6. 미래에 대한 계획을 세울 때 당신의 접근 방식은?</p>
+                                <label><input type="radio" name="q6" value="S"> 현실적으로 실현 가능한 목표와 구체적인 실행 단계에 집중한다.</label>
+                                <label><input type="radio" name="q6" value="N"> 10년 뒤의 원대한 비전과 추상적인 꿈에 대해 상상하며 즐거워한다.</label>
+                            </div>
+                            <div class="question" data-q="7">
+                                <p>7. 타인의 고민을 들어줄 때 당신의 첫 번째 반응은?</p>
+                                <label><input type="radio" name="q7" value="T"> 상황을 논리적으로 분석하여 실질적인 해결책을 제시하려 노력한다.</label>
+                                <label><input type="radio" name="q7" value="F"> 상대방의 감정에 깊이 공감하고 정서적으로 위로하며 지지해준다.</label>
+                            </div>
+                            <div class="question" data-q="8">
+                                <p>8. 중요한 결정을 내려야 할 때 당신의 판단 기준은?</p>
+                                <label><input type="radio" name="q8" value="T"> 객관적인 원칙과 논리, 그리고 인과관계에 따른 합리성.</label>
+                                <label><input type="radio" name="q8" value="F"> 주변 사람들에게 미칠 영향과 조화로운 인간관계 유지.</label>
+                            </div>
+                            <div class="question" data-q="9">
+                                <p>9. 정직함과 친절함 중 하나를 선택해야 한다면?</p>
+                                <label><input type="radio" name="q9" value="T"> 다소 상처가 되더라도 진실을 말하는 것이 옳다고 믿는다.</label>
+                                <label><input type="radio" name="q9" value="F"> 진실보다 상대방의 기분을 배려하는 따뜻한 말 한마디가 중요하다.</label>
+                            </div>
+                            <div class="question" data-q="10">
+                                <p>10. 여행 일정을 짤 때 당신이 선호하는 방식은?</p>
+                                <label><input type="radio" name="q10" value="J"> 시간 단위로 상세한 계획을 세우고 예약 사항을 철저히 확인한다.</label>
+                                <label><input type="radio" name="q10" value="P"> 큰 틀만 정해두고 현지 기분이나 상황에 따라 즉흥적으로 움직인다.</label>
+                            </div>
+                            <div class="question" data-q="11">
+                                <p>11. 책상 정리나 방 청소에 대한 당신의 습관은?</p>
+                                <label><input type="radio" name="q11" value="J"> 모든 물건이 제자리에 있어야 마음이 편하고 항상 정리된 상태를 유지한다.</label>
+                                <label><input type="radio" name="q11" value="P"> 다소 어질러져 있어도 어디에 무엇이 있는지 알고 있으며 크게 신경 쓰지 않는다.</label>
+                            </div>
+                            <div class="question" data-q="12">
+                                <p>12. 과제를 수행하거나 일을 끝마칠 때 당신의 태도는?</p>
+                                <label><input type="radio" name="q12" value="J"> 마감 기한보다 훨씬 일찍 서둘러서 끝내고 마음 편히 쉰다.</label>
+                                <label><input type="radio" name="q12" value="P"> 마지막 순간에 집중력이 발휘되는 편이며 마감 직전에 일을 마친다.</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mbti-navigation-btns">
+                        <button id="mbti-prev-btn" class="btn secondary" style="display: none;">이전 질문</button>
+                        <button id="mbti-next-btn" class="btn primary" style="display: none;">다음 질문</button>
+                        <button id="mbti-submit-btn" class="btn primary" style="display: none;">나의 성격 유형 분석하기</button>
+                    </div>
+                    <div id="mbti-result"></div>
+                </div>
+
+                <div class="mbti-info-section card">
+                    <h3>MBTI 테스트란 무엇인가요?</h3>
+                    <p>MBTI(Myers-Briggs Type Indicator)는 마이어스와 브릭스가 융의 심리 유형론을 토대로 고안한 자기 보고식 성격 유형 지표입니다. 4가지 선호 지표의 조합을 통해 총 16가지 성격 유형으로 분류합니다.</p>
+                    <div class="mbti-grid">
+                        <div class="mbti-grid-item">
+                            <strong>E vs I</strong>
+                            <p>에너지의 방향 (외향 vs 내향)</p>
+                        </div>
+                        <div class="mbti-grid-item">
+                            <strong>S vs N</strong>
+                            <p>인식 방식 (감각 vs 직관)</p>
+                        </div>
+                        <div class="mbti-grid-item">
+                            <strong>T vs F</strong>
+                            <p>판단 근거 (사고 vs 감정)</p>
+                        </div>
+                        <div class="mbti-grid-item">
+                            <strong>J vs P</strong>
+                            <p>생활 양식 (판단 vs 인식)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 운세와 성격. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="privacy.html">개인정보 처리방침</a></li>
+                <li><a href="about.html">이용약관</a></li>
+                <li><a href="about.html">문의하기</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
